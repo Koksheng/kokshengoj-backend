@@ -6,7 +6,7 @@ namespace kokshengoj.Application.Users.Queries.GetCurrentUser
     {
         public GetCurrentUserQueryValidator()
         {
-            RuleFor(x => x.userState).NotEmpty();
+            //RuleFor(x => x.userState).NotEmpty();
 
         }
     }

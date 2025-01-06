@@ -46,6 +46,9 @@ namespace kokshengoj.Application.Users.Queries.GetCurrentUser
             ////safetyUser.IsAdmin = await verifyIsAdminRoleAsync();
             ////return safetyUser;
 
+            if (userState == null)
+                return null;
+
             var safetyUser = await _currentUserService.GetCurrentUserAsync(userState);
 
             return safetyUser;
