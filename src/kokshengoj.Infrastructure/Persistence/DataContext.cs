@@ -1,4 +1,6 @@
 ﻿using kokshengoj.Domain.Common.Models;
+using kokshengoj.Domain.QuestionAggregate;
+using kokshengoj.Domain.QuestionSubmitAggregate;
 using kokshengoj.Domain.UserAggregate;
 using kokshengoj.Infrastructure.Persistence.Interceptors;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +20,8 @@ namespace kokshengoj.Infrastructure.Persistence
             _publishDomainEventsInterceptor = publishDomainEventsInterceptor;
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<QuestionSubmit> QuestionSubmits { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
